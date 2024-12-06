@@ -23,8 +23,8 @@ const About: React.FC = () => {
         </section>
 
         {/* Our Mission Section */}
-        <section className="mb-12 flex items-center justify-between">
-          <div className="w-full lg:w-1/2">
+        <section className="mb-12 flex items-center justify-between flex-col lg:flex-row">
+          <div className="w-full lg:w-1/2 mb-8 lg:mb-0">
             <h2 className="text-3xl font-semibold text-gray-800 mb-4">
               Our Mission
             </h2>
@@ -32,7 +32,7 @@ const About: React.FC = () => {
               Our mission is to create an accessible platform for learning, offering high-quality tutorials, courses, and resources to help you achieve your goals. Whether you're a beginner or a professional, our platform is here to support you every step of the way.
             </p>
           </div>
-          <div className="w-full lg:w-1/2 mt-8 lg:mt-0">
+          <div className="w-full lg:w-1/2">
             <img
               src="/src/assets/tutorials.jpg"
               alt="Our Mission"
@@ -47,81 +47,28 @@ const About: React.FC = () => {
           <h2 className="text-3xl font-semibold text-gray-800 mb-6 text-center">
             Meet Our Team
           </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
             {/* Example Team Member Cards */}
-            <div className="bg-white rounded-lg shadow-lg p-6 text-center">
-              <img
-                src="/src/assets/T1.jpg"
-                alt="Team Member"
-                className="w-24 h-24 mx-auto rounded-full mb-4"
-              />
-              <h3 className="text-xl font-semibold text-gray-800">Dilawar Khan</h3>
-              <p className="text-gray-600">Founder & CEO</p>
-            </div>
-            <div className="bg-white rounded-lg shadow-lg p-6 text-center">
-              <img
-                src="/src/assets/T1.jpg"
-                alt="Team Member"
-                className="w-24 h-24 mx-auto rounded-full mb-4"
-              />
-              <h3 className="text-xl font-semibold text-gray-800">Dilawar Khan</h3>
-              <p className="text-gray-600">Lead Developer</p>
-            </div>
-            <div className="bg-white rounded-lg shadow-lg p-6 text-center">
-              <img
-                src="/src/assets/T3.jpg"
-                alt="Team Member"
-                className="w-24 h-24 mx-auto rounded-full mb-4"
-              />
-              <h3 className="text-xl font-semibold text-gray-800">Saqib Hussain</h3>
-              <p className="text-gray-600">Junior Web Developer</p>
-            </div>
-            <div className="bg-white rounded-lg shadow-lg p-6 text-center">
-              <img
-                src="/src/assets/T4.jpg"
-                alt="Team Member"
-                className="w-24 h-24 mx-auto rounded-full mb-4"
-              />
-              <h3 className="text-xl font-semibold text-gray-800">Michael Lee</h3>
-              <p className="text-gray-600">Marketing Specialist</p>
-            </div>
-            {/* Additional Team Member Cards */}
-            <div className="bg-white rounded-lg shadow-lg p-6 text-center">
-              <img
-                src="/src/assets/T5.jpg"
-                alt="Team Member"
-                className="w-24 h-24 mx-auto rounded-full mb-4"
-              />
-              <h3 className="text-xl font-semibold text-gray-800">Sophia Turner</h3>
-              <p className="text-gray-600">Content Strategist</p>
-            </div>
-            <div className="bg-white rounded-lg shadow-lg p-6 text-center">
-              <img
-                src="/src/assets/T6.jpg"
-                alt="Team Member"
-                className="w-24 h-24 mx-auto rounded-full mb-4"
-              />
-              <h3 className="text-xl font-semibold text-gray-800">Daniel Adams</h3>
-              <p className="text-gray-600">Backend Developer</p>
-            </div>
-            <div className="bg-white rounded-lg shadow-lg p-6 text-center">
-              <img
-                src="/src/assets/T7.jpg"
-                alt="Team Member"
-                className="w-24 h-24 mx-auto rounded-full mb-4"
-              />
-              <h3 className="text-xl font-semibold text-gray-800">Lucas King</h3>
-              <p className="text-gray-600">DevOps Engineer</p>
-            </div>
-            <div className="bg-white rounded-lg shadow-lg p-6 text-center">
-              <img
-                src="/src/assets/T8.jpg"
-                alt="Team Member"
-                className="w-24 h-24 mx-auto rounded-full mb-4"
-              />
-              <h3 className="text-xl font-semibold text-gray-800">Emma Clark</h3>
-              <p className="text-gray-600">Customer Support</p>
-            </div>
+            {[
+              { name: 'Dilawar Khan', role: 'Founder & CEO', imgSrc: '/src/assets/T1.jpg' },
+              { name: 'Dilawar Khan', role: 'Lead Developer', imgSrc: '/src/assets/T1.jpg' },
+              { name: 'Saqib Hussain', role: 'Junior Web Developer', imgSrc: '/src/assets/T3.jpg' },
+              { name: 'Michael Lee', role: 'Marketing Specialist', imgSrc: '/src/assets/T4.jpg' },
+              { name: 'Sophia Turner', role: 'Content Strategist', imgSrc: '/src/assets/T5.jpg' },
+              { name: 'Daniel Adams', role: 'Backend Developer', imgSrc: '/src/assets/T6.jpg' },
+              { name: 'Lucas King', role: 'DevOps Engineer', imgSrc: '/src/assets/T7.jpg' },
+              { name: 'Emma Clark', role: 'Customer Support', imgSrc: '/src/assets/T8.jpg' },
+            ].map((member, index) => (
+              <div key={index} className="bg-white rounded-lg shadow-lg p-6 text-center">
+                <img
+                  src={member.imgSrc}
+                  alt={member.name}
+                  className="w-24 h-24 mx-auto rounded-full mb-4"
+                />
+                <h3 className="text-xl font-semibold text-gray-800">{member.name}</h3>
+                <p className="text-gray-600">{member.role}</p>
+              </div>
+            ))}
           </div>
         </section>
 
@@ -137,7 +84,7 @@ const About: React.FC = () => {
               />
             </div>
             <div className="w-full lg:w-1/2">
-              <h2 className="text-3xl font-semibold text-gray-800 mb-4 space-x-4">
+              <h2 className="text-3xl font-semibold text-gray-800 mb-4">
                 Why Choose Us?
               </h2>
               <ul className="list-disc pl-6 text-gray-600 text-lg space-y-2">

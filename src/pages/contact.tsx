@@ -1,17 +1,46 @@
-import React from 'react';
-
+import React, { useState } from 'react';
+import { FaPlus, FaMinus } from 'react-icons/fa'; // Importing icons from react-icons
 
 const Contact: React.FC = () => {
+  const [activeIndex, setActiveIndex] = useState<number | null>(null);
+
+  const toggleAnswer = (index: number) => {
+    setActiveIndex(activeIndex === index ? null : index);
+  };
+
+  const faqs = [
+    {
+      question: "What is Learning Hub?",
+      answer: "Learning Hub is an online platform that provides comprehensive tutorials, courses, and resources to help individuals learn new skills and advance their careers."
+    },
+    {
+      question: "How do I sign up?",
+      answer: "You can sign up by clicking the 'Sign Up' button on our homepage and filling in your details to create an account."
+    },
+    {
+      question: "Is there a fee for the courses?",
+      answer: "We offer both free and paid courses. Free courses are available to everyone, while paid courses require a subscription or one-time payment."
+    },
+    {
+      question: "Can I access the courses on mobile?",
+      answer: "Yes! Our platform is mobile-friendly, and you can access all the courses on your mobile device."
+    },
+    {
+      question: "How do I contact support?",
+      answer: "You can reach our support team via the 'Contact Us' page or by emailing support@learninghub.com."
+    }
+  ];
+
   return (
     <div className="bg-gray-100 py-16 px-4">
-      <div className="max-w-7xl mx-auto">
-       {/* Breadcrumb Navigation */}
-      <div className="max-w-7xl mx-auto mb-8">
-        <p className="text-sm text-gray-700">
-          <a href="/" className="text-blue-600 hover:underline">Home</a> &gt; 
-          <span className="text-gray-500"> Contact Us</span>
-        </p>
-      </div>
+      <div className=" mx-auto">
+        {/* Breadcrumb Navigation */}
+        <div className="max-w-7xl mx-auto mb-8">
+          <p className="text-sm text-gray-700">
+            <a href="/" className="text-blue-600 hover:underline">Home</a> &gt; 
+            <span className="text-gray-500"> Contact Us</span>
+          </p>
+        </div>
 
         {/* Page Title */}
         <h1 className="text-4xl font-bold text-center text-gray-800 mb-12">
@@ -97,20 +126,20 @@ const Contact: React.FC = () => {
                   <span className="text-blue-500">
                     <i className="fas fa-phone-alt"></i>
                   </span>
-                  <span className="text-gray-700">+1 (123) 456-7890</span>
+                  <span className="text-gray-700">+92 (123) 456-7890</span>
                 </div>
                 <div className="flex items-center space-x-4">
                   <span className="text-blue-500">
                     <i className="fas fa-envelope"></i>
                   </span>
-                  <span className="text-gray-700">contact@learninghub.com</span>
+                  <span className="text-gray-700">contact@syntixdesigner.com</span>
                 </div>
                 <div className="flex items-center space-x-4">
                   <span className="text-blue-500">
                     <i className="fas fa-map-marker-alt"></i>
                   </span>
                   <span className="text-gray-700">
-                    123 Learning Street, Knowledge City
+                    Islamabad, Pakistan
                   </span>
                 </div>
               </div>
@@ -128,6 +157,38 @@ const Contact: React.FC = () => {
                 loading="lazy"
               ></iframe>
             </div>
+          </div>
+        </div>
+
+        {/* FAQ Section */}
+        <div className="mt-16">
+          <h2 className="text-3xl font-semibold text-gray-800 mb-8 text-center">
+            Frequently Asked Questions
+          </h2>
+          <div className="space-y-6">
+            {faqs.map((faq, index) => (
+              <div
+                key={index}
+                className="bg-gray-100 rounded-lg shadow-md p-6"
+              >
+                <div
+                  className="flex justify-between items-center cursor-pointer"
+                  onClick={() => toggleAnswer(index)}
+                >
+                  <h3 className="text-xl font-semibold text-gray-800">{faq.question}</h3>
+                  <span className="text-gray-600">
+                    {activeIndex === index ? (
+                      <FaMinus className="text-blue-500" />
+                    ) : (
+                      <FaPlus className="text-blue-500" />
+                    )}
+                  </span>
+                </div>
+                {activeIndex === index && (
+                  <p className="mt-4 text-gray-600">{faq.answer}</p>
+                )}
+              </div>
+            ))}
           </div>
         </div>
       </div>

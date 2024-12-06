@@ -4,19 +4,19 @@ const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isSearchOpen, setIsSearchOpen] = useState(false); // for toggling search bar on mobile
   const navItems = [
-    { name: "Home", link: "#hero" },
-    { name: "Services", link: "#services" },
-    { name: "Tutorials", link: "#tutorials" },
-    { name: "About", link: "#about" },
-    { name: "Contact", link: "#contact" },
+    { name: "Home", link: "/" },
+    { name: "Services", link: "/services" },
+    { name: "Tutorials", link: "/tutorials" },
+    { name: "About", link: "/about" },
+    { name: "Contact", link: "/contact" },
   ];
 
   return (
     <nav className="sticky top-0 z-50 bg-[#E7ECEF] text-black shadow-md">
-      <div className="flex items-center justify-between p-6 lg:p-5 max-w-7xl mx-auto">
+      <div className="flex items-center justify-between p-6 lg:p-5">
         {/* Logo */}
         <a
-          href="#hero"
+          href="/"
           className="text-xl lg:text-2xl font-mono tracking-wider text-black hover:text-gray-700 transition-all"
         >
           SyntixDesigner
@@ -36,12 +36,26 @@ const Header: React.FC = () => {
         </div>
 
         {/* Search Bar on Desktop */}
-        <div className="hidden lg:flex items-center space-x-4">
+        <div className="hidden lg:flex items-center space-x-4 relative">
           <input
             type="text"
             placeholder="Search..."
-            className="py-2 px-4 border border-gray-300 rounded-full w-48 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="py-2 px-4 pl-12 border border-gray-300 rounded-full w-48 focus:outline-none focus:ring-2 focus:ring-blue-500"
           />
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            className="absolute left-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-gray-500"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              d="M10 18a8 8 0 100-16 8 8 0 000 16zm0 0l4 4"
+            />
+          </svg>
         </div>
 
         {/* Hamburger Menu for Mobile */}
@@ -92,13 +106,16 @@ const Header: React.FC = () => {
 
       {/* Mobile Menu */}
       <div
-        className={`lg:hidden flex flex-col items-center space-y-4 px-6 py-4 ${isMenuOpen ? "block" : "hidden"}`}
+        className={`lg:hidden flex flex-col items-center space-y-4 px-6 py-4 ${
+          isMenuOpen ? "block" : "hidden"
+        }`}
       >
         {navItems.map((item) => (
           <a
             href={item.link}
             key={item.name}
             className="text-md text-black hover:text-gray-700 px-3 py-1 transition-colors"
+            onClick={() => setIsMenuOpen(false)} // Close the menu after clicking a link
           >
             {item.name}
           </a>
@@ -111,11 +128,27 @@ const Header: React.FC = () => {
           isSearchOpen ? "block mt-3" : "hidden"
         }`} // Fixed margin to adjust gap
       >
-        <input
-          type="text"
-          placeholder="Search..."
-          className="py-2 px-4 border border-gray-300 rounded-full w-48 focus:outline-none focus:ring-2 focus:ring-blue-500"
-        />
+        <div className="relative w-48">
+          <input
+            type="text"
+            placeholder="Search..."
+            className="py-2 px-4 pl-10 border border-gray-300 rounded-full w-full focus:outline-none focus:ring-2 focus:ring-blue-500"
+          />
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            className="absolute left-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-gray-500"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              d="M10 18a8 8 0 100-16 8 8 0 000 16zm0 0l4 4"
+            />
+          </svg>
+        </div>
       </div>
     </nav>
   );
