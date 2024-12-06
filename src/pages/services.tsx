@@ -76,9 +76,9 @@ const Services: React.FC = () => {
         </h1>
 
         {/* Filters and Search Bar Container */}
-        <div className="flex justify-between mb-8">
+        <div className="flex flex-col sm:flex-row sm:justify-between mb-8">
           {/* Categories/Filters */}
-          <div className="flex space-x-6">
+          <div className="flex flex-wrap space-x-6 mb-4 sm:mb-0">
             {categories.map((category) => (
               <button
                 key={category}
@@ -91,7 +91,7 @@ const Services: React.FC = () => {
           </div>
 
           {/* Search Bar */}
-          <div className="max-w-md">
+          <div className="max-w-md w-full">
             <input
               type="text"
               placeholder="Search for a service..."
@@ -103,7 +103,7 @@ const Services: React.FC = () => {
         </div>
 
         {/* Services Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {filteredServices.map((service) => (
             <div
               key={service.id}
@@ -128,7 +128,7 @@ const Services: React.FC = () => {
           <h2 className="text-3xl font-bold text-center text-gray-800 mb-8">
             Featured Tutorials
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="bg-white rounded-lg shadow-lg p-6">
               <h3 className="text-xl font-semibold text-gray-800 mb-2">Web Development 101</h3>
               <p className="text-gray-600 mb-4">Learn the basics of web development in this step-by-step guide.</p>

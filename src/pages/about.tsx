@@ -2,12 +2,12 @@ import React from 'react';
 import Tutorial from "../assets/tutorial.jpg"
 import Tutorial1 from "../assets/tutorials.jpg"
 import T1 from "../assets/T1.jpg"
-import T2 from "../assets/T2.jpg"
 import T3 from "../assets/T3.jpg"
 import T4 from "../assets/T4.jpg"
 import T5 from "../assets/T5.jpg"
 import T6 from "../assets/T6.jpg"
 import T7 from "../assets/T7.jpg"
+import T8 from "../assets/T8.jpg"
 
 const About: React.FC = () => {
   return (
@@ -61,12 +61,12 @@ const About: React.FC = () => {
             {[
               { name: 'Dilawar Khan', role: 'Founder & CEO', imgSrc: T1 },
               { name: 'Dilawar Khan', role: 'Lead Developer', imgSrc: T1 },
-              { name: 'Saqib Hussain', role: 'Junior Web Developer', imgSrc: T2 },
-              { name: 'Michael Lee', role: 'Marketing Specialist', imgSrc: T3 },
-              { name: 'Sophia Turner', role: 'Content Strategist', imgSrc: T4 },
-              { name: 'Daniel Adams', role: 'Backend Developer', imgSrc: T5},
-              { name: 'Lucas King', role: 'DevOps Engineer', imgSrc: T6 },
-              { name: 'Emma Clark', role: 'Customer Support', imgSrc: T7 },
+              { name: 'Saqib Hussain', role: 'Junior Web Developer', imgSrc: T3 },
+              { name: 'Michael Lee', role: 'Marketing Specialist', imgSrc: T4 },
+              { name: 'Sophia Turner', role: 'Content Strategist', imgSrc: T5 },
+              { name: 'Daniel Adams', role: 'Backend Developer', imgSrc: T6 },
+              { name: 'Lucas King', role: 'DevOps Engineer', imgSrc: T7 },
+              { name: 'Emma Clark', role: 'Customer Support', imgSrc: T8 },
             ].map((member, index) => (
               <div key={index} className="bg-white rounded-lg shadow-lg p-6 text-center">
                 <img

@@ -35,7 +35,7 @@ const TutorialDetail: React.FC = () => {
 
   return (
     <div className="bg-gradient-to-r from-[#E7ECEF] to-[#d3e4f2] py-16 px-4">
-      <div className="max-w-7xl mx-auto flex flex-col lg:flex-row">
+      <div className=" mx-auto flex flex-col lg:flex-row">
         {/* Table of Contents */}
         <div className="lg:w-1/4 bg-white shadow-lg rounded-lg p-6 mb-6 lg:mb-0 lg:mr-6">
           <h2 className="text-xl font-bold text-gray-800 mb-4">Table of Contents</h2>
@@ -62,7 +62,7 @@ const TutorialDetail: React.FC = () => {
           <div className="mb-6">
             {tutorialImage && (
               <img
-                src={tutorialImage}
+                src={tutorial.image}
                 alt={tutorial.title}
                 className="w-full h-auto object-cover rounded-md shadow-sm"
               />

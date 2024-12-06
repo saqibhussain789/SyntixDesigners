@@ -14,9 +14,8 @@ const Tutorials: React.FC = () => {
     const matchesSearch =
       tutorial.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
       tutorial.description.toLowerCase().includes(searchQuery.toLowerCase());
-    return matchesSearch; // You can omit category filtering if you don't have it
+    return matchesSearch;
   });
-  
 
   return (
     <div className="bg-gradient-to-r from-[#E7ECEF] to-[#d3e4f2] py-16 px-4">
@@ -35,9 +34,9 @@ const Tutorials: React.FC = () => {
         </h1>
 
         {/* Filters and Search Bar */}
-        <div className="flex justify-between mb-8">
+        <div className="flex flex-col sm:flex-row sm:justify-between mb-8">
           {/* Categories/Filters */}
-          <div className="flex space-x-6">
+          <div className="flex flex-wrap space-x-6 mb-4 sm:mb-0">
             {categories.map((category) => (
               <button
                 key={category}
@@ -50,7 +49,7 @@ const Tutorials: React.FC = () => {
           </div>
 
           {/* Search Bar */}
-          <div className="max-w-md">
+          <div className="max-w-md w-full">
             <input
               type="text"
               placeholder="Search by Topic..."
