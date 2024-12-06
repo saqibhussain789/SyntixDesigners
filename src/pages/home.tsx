@@ -19,7 +19,8 @@ const Home: React.FC = () => {
     <div>
       <section
         id="hero"
-        className="relative h-screen flex flex-col lg:flex-row items-center justify-between px-6 py-12 bg-cover bg-center bg-[#e0f2f7] pt-20 lg:pt-0"
+        className="h-screen flex flex-col lg:flex-row items-center justify-between px-6 py-12 
+             bg-cover bg-center lg:bg-center lg:bg-cover bg-[#e0f2f7] pt-20 lg:pt-0"
         style={{
           backgroundImage: 'url("/src/assets/hero.jpg")',
           // backgroundSize: "cover", // Ensure background size covers the entire section
