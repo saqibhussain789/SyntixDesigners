@@ -1,35 +1,33 @@
 import React from "react";
-import WebImage from ".././assets/Web.jpg"
-import MLImage from ".././assets/ML.jpg"
-import HTMLImage from ".././assets/HTML.jpg"
-import T24Image from ".././assets/icons/24-7.png"
-import PLImage from ".././assets/icons/personalized-learning.png"
-import ETImage from ".././assets/icons/expert-tutors.png"
-import ComSupImage from ".././assets/icons/com-sup.png"
-import TrackImage from ".././assets/icons/progress-tracking.png"
-import T1 from "../assets/T1.jpg"
-import T2 from "../assets/T2.jpg"
-import T3 from "../assets/T3.jpg"
-import T4 from "../assets/T4.jpg"
-import T5 from "../assets/T5.jpg"
-import T6 from "../assets/T6.jpg"
+import WebImage from ".././assets/Web.jpg";
+import MLImage from ".././assets/ML.jpg";
+import HTMLImage from ".././assets/HTML.jpg";
+import T24Image from ".././assets/icons/24-7.png";
+import PLImage from ".././assets/icons/personalized-learning.png";
+import ETImage from ".././assets/icons/expert-tutors.png";
+import ComSupImage from ".././assets/icons/com-sup.png";
+import TrackImage from ".././assets/icons/progress-tracking.png";
+import T1 from "../assets/T1.jpg";
+import T2 from "../assets/T2.jpg";
+import T3 from "../assets/T3.jpg";
+import T4 from "../assets/T4.jpg";
+import T5 from "../assets/T5.jpg";
+import T6 from "../assets/T6.jpg";
 
 const Home: React.FC = () => {
   return (
     <div>
-      {/* Hero Section */}
       <section
         id="hero"
-        className="h-screen flex flex-col lg:flex-row items-center justify-between px-6 py-12 
-             bg-cover bg-center lg:bg-center lg:bg-cover bg-[#e0f2f7] pt-20 lg:pt-0"
+        className="relative h-screen flex flex-col lg:flex-row items-center justify-between px-6 py-12 bg-cover bg-center bg-[#e0f2f7] pt-20 lg:pt-0"
         style={{
           backgroundImage: 'url("/src/assets/hero.jpg")',
+          backgroundSize: "cover", // Ensure background size covers the entire section
+          backgroundPosition: "center", // Ensure it's centered in the viewport
+          
         }}
       >
-        <div
-          className="absolute inset-0 bg-[url('/src/assets/hero.jpg')] bg-cover bg-center
-               lg:bg-center   lg:bg-[length:100%] h-screen bg-no-repeat"
-        ></div>
+        <div className="absolute inset-0 bg-cover bg-center lg:bg-center bg-no-repeat h-full w-full"></div>
         <div className="relative z-10 lg:w-1/2 text-center lg:text-left text-black lg:text-white">
           <p className="text-3xl lg:text-4xl font-semibold mb-4">
             Welcome to SyntixDesigner
