@@ -1,4 +1,13 @@
 import React from 'react';
+import Tutorial from "../assets/tutorial.jpg"
+import Tutorial1 from "../assets/tutorials.jpg"
+import T1 from "../assets/T1.jpg"
+import T2 from "../assets/T2.jpg"
+import T3 from "../assets/T3.jpg"
+import T4 from "../assets/T4.jpg"
+import T5 from "../assets/T5.jpg"
+import T6 from "../assets/T6.jpg"
+import T7 from "../assets/T7.jpg"
 
 const About: React.FC = () => {
   return (
@@ -34,7 +43,7 @@ const About: React.FC = () => {
           </div>
           <div className="w-full lg:w-1/2">
             <img
-              src="/src/assets/tutorials.jpg"
+              src={Tutorial1}
               alt="Our Mission"
               className="w-full rounded-lg shadow-lg object-cover"
               style={{ height: '350px', objectFit: 'cover' }}
@@ -50,14 +59,14 @@ const About: React.FC = () => {
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
             {/* Example Team Member Cards */}
             {[
-              { name: 'Dilawar Khan', role: 'Founder & CEO', imgSrc: '/src/assets/T1.jpg' },
-              { name: 'Dilawar Khan', role: 'Lead Developer', imgSrc: '/src/assets/T1.jpg' },
-              { name: 'Saqib Hussain', role: 'Junior Web Developer', imgSrc: '/src/assets/T3.jpg' },
-              { name: 'Michael Lee', role: 'Marketing Specialist', imgSrc: '/src/assets/T4.jpg' },
-              { name: 'Sophia Turner', role: 'Content Strategist', imgSrc: '/src/assets/T5.jpg' },
-              { name: 'Daniel Adams', role: 'Backend Developer', imgSrc: '/src/assets/T6.jpg' },
-              { name: 'Lucas King', role: 'DevOps Engineer', imgSrc: '/src/assets/T7.jpg' },
-              { name: 'Emma Clark', role: 'Customer Support', imgSrc: '/src/assets/T8.jpg' },
+              { name: 'Dilawar Khan', role: 'Founder & CEO', imgSrc: T1 },
+              { name: 'Dilawar Khan', role: 'Lead Developer', imgSrc: T1 },
+              { name: 'Saqib Hussain', role: 'Junior Web Developer', imgSrc: T2 },
+              { name: 'Michael Lee', role: 'Marketing Specialist', imgSrc: T3 },
+              { name: 'Sophia Turner', role: 'Content Strategist', imgSrc: T4 },
+              { name: 'Daniel Adams', role: 'Backend Developer', imgSrc: T5},
+              { name: 'Lucas King', role: 'DevOps Engineer', imgSrc: T6 },
+              { name: 'Emma Clark', role: 'Customer Support', imgSrc: T7 },
             ].map((member, index) => (
               <div key={index} className="bg-white rounded-lg shadow-lg p-6 text-center">
                 <img
@@ -77,7 +86,7 @@ const About: React.FC = () => {
           <div className="flex items-center justify-between flex-col lg:flex-row">
             <div className="w-full lg:w-1/2 mb-8 lg:mb-0">
               <img
-                src="/src/assets/tutorial.jpg"
+                src={Tutorial}
                 alt="Why Choose Us"
                 className="w-full rounded-lg shadow-lg object-cover"
                 style={{ height: '350px', objectFit: 'cover' }}
