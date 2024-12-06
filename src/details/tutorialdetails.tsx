@@ -12,6 +12,11 @@ const TutorialDetail: React.FC = () => {
     return <div>Tutorial not found</div>;
   }
 
+  // Extract the image URL from the `image` object
+  const tutorialImage = tutorial.image
+    ? Object.values(tutorial.image)[0] // Get the first value from the image object
+    : null;
+
   useEffect(() => {
     if (contentRef.current) {
       const headingElements = Array.from(
@@ -55,11 +60,13 @@ const TutorialDetail: React.FC = () => {
         >
           <h1 className="text-3xl font-bold text-gray-800 mb-6">{tutorial.title}</h1>
           <div className="mb-6">
-            <img
-              src={tutorial.image}
-              alt={tutorial.title}
-              className="w-full h-auto object-cover rounded-md shadow-sm"
-            />
+            {tutorialImage && (
+              <img
+                src={tutorialImage}
+                alt={tutorial.title}
+                className="w-full h-auto object-cover rounded-md shadow-sm"
+              />
+            )}
           </div>
 
           {/* Render Tutorial Component */}

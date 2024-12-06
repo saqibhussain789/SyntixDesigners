@@ -1,5 +1,19 @@
 import React from "react";
 import WebImage from ".././assets/Web.jpg"
+import MLImage from ".././assets/ML.jpg"
+import HTMLImage from ".././assets/HTML.jpg"
+import T24Image from ".././assets/icons/24-7.png"
+import PLImage from ".././assets/icons/personalized-learning.png"
+import ETImage from ".././assets/icons/expert-tutors.png"
+import ComSupImage from ".././assets/icons/com-sup.png"
+import TrackImage from ".././assets/icons/progress-tracking.png"
+import T1 from "../assets/T1.jpg"
+import T2 from "../assets/T2.jpg"
+import T3 from "../assets/T3.jpg"
+import T4 from "../assets/T4.jpg"
+import T5 from "../assets/T5.jpg"
+import T6 from "../assets/T6.jpg"
+
 const Home: React.FC = () => {
   return (
     <div>
@@ -78,7 +92,7 @@ const Home: React.FC = () => {
           {/* Service Card 2 */}
           <div className="bg-[#F8F8FB] rounded-lg shadow-lg p-6 w-full sm:w-64">
             <img
-              src="/src/assets/ML.jpg"
+              src={MLImage}
               alt="Machine Learning"
               className="w-full h-40 object-cover rounded-lg mb-4"
             />
@@ -90,7 +104,7 @@ const Home: React.FC = () => {
           {/* Service Card 3 */}
           <div className="bg-[#F8F8FB] rounded-lg shadow-lg p-6 w-full sm:w-64">
             <img
-              src="/src/assets/ML.jpg"
+              src={MLImage}
               alt="Artificial Intelligence"
               className="w-full h-40 object-cover rounded-lg mb-4"
             />
@@ -105,7 +119,7 @@ const Home: React.FC = () => {
           {/* Service Card 4 */}
           <div className="bg-[#F8F8FB] rounded-lg shadow-lg p-6 w-full sm:w-64">
             <img
-              src="/src/assets/HTML.jpg"
+              src={HTMLImage}
               alt="UI/UX Design"
               className="w-full h-40 object-cover rounded-lg mb-4"
             />
@@ -136,7 +150,7 @@ const Home: React.FC = () => {
           <div className="w-full sm:w-64 bg-white rounded-lg shadow-lg p-6">
             <div className="w-16 h-16 mx-auto mb-4">
               <img
-                src="/src/assets/icons/24-7.png"
+                src={T24Image}
                 alt="24/7 Access Icon"
                 className="w-full h-full object-contain"
               />
@@ -150,7 +164,7 @@ const Home: React.FC = () => {
           <div className="w-full sm:w-64 bg-white rounded-lg shadow-lg p-6">
             <div className="w-16 h-16 mx-auto mb-4">
               <img
-                src="/src/assets/icons/expert-tutors.png"
+                src={ETImage}
                 alt="Expert Tutors Icon"
                 className="w-full h-full object-contain"
               />
@@ -164,7 +178,7 @@ const Home: React.FC = () => {
           <div className="w-full sm:w-64 bg-white rounded-lg shadow-lg p-6">
             <div className="w-16 h-16 mx-auto mb-4">
               <img
-                src="src/assets/icons/com-sup.png"
+                src={ComSupImage}
                 alt="Community Support Icon"
                 className="w-full h-full object-contain"
               />
@@ -179,7 +193,7 @@ const Home: React.FC = () => {
           <div className="w-full sm:w-64 bg-white rounded-lg shadow-lg p-6">
             <div className="w-16 h-16 mx-auto mb-4">
               <img
-                src="/src/assets/icons/personalized-learning.png"
+                src={PLImage}
                 alt="Personalized Learning Icon"
                 className="w-full h-full object-contain"
               />
@@ -196,7 +210,7 @@ const Home: React.FC = () => {
           <div className="w-full sm:w-64 bg-white rounded-lg shadow-lg p-6">
             <div className="w-16 h-16 mx-auto mb-4">
               <img
-                src="/src/assets/icons/progress-tracking.png"
+                src={TrackImage}
                 alt="Progress Tracking Icon"
                 className="w-full h-full object-contain"
               />
@@ -220,7 +234,7 @@ const Home: React.FC = () => {
             <div className="bg-white p-6 rounded-lg shadow-lg">
               <div className="flex items-center mb-4">
                 <img
-                  src="/src/assets/T1.jpg"
+                  src={T1}
                   alt="John Doe"
                   className="w-16 h-16 rounded-full mr-4"
                 />
@@ -239,7 +253,7 @@ const Home: React.FC = () => {
             <div className="bg-white p-6 rounded-lg shadow-lg">
               <div className="flex items-center mb-4">
                 <img
-                  src="/src/assets/T2.jpg"
+                  src={T2}
                   alt="Jane Smith"
                   className="w-16 h-16 rounded-full mr-4"
                 />
@@ -260,7 +274,7 @@ const Home: React.FC = () => {
             <div className="bg-white p-6 rounded-lg shadow-lg">
               <div className="flex items-center mb-4">
                 <img
-                  src="/src/assets/T3.jpg"
+                  src={T3}
                   alt="Mark Lee"
                   className="w-16 h-16 rounded-full mr-4"
                 />
@@ -280,7 +294,7 @@ const Home: React.FC = () => {
             <div className="bg-white p-6 rounded-lg shadow-lg">
               <div className="flex items-center mb-4">
                 <img
-                  src="/src/assets/T4.jpg"
+                  src={T4}
                   alt="Anna Kim"
                   className="w-16 h-16 rounded-full mr-4"
                 />
@@ -299,7 +313,7 @@ const Home: React.FC = () => {
             <div className="bg-white p-6 rounded-lg shadow-lg">
               <div className="flex items-center mb-4">
                 <img
-                  src="/src/assets/T5.jpg"
+                  src={T5}
                   alt="Olivia Brown"
                   className="w-16 h-16 rounded-full mr-4"
                 />
@@ -319,7 +333,7 @@ const Home: React.FC = () => {
             <div className="bg-white p-6 rounded-lg shadow-lg">
               <div className="flex items-center mb-4">
                 <img
-                  src="/src/assets/T6.jpg"
+                  src={T6}
                   alt="Kevin Johnson"
                   className="w-16 h-16 rounded-full mr-4"
                 />
