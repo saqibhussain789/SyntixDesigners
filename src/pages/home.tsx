@@ -22,8 +22,8 @@ const Home: React.FC = () => {
         className="relative h-screen flex flex-col lg:flex-row items-center justify-between px-6 py-12 bg-cover bg-center bg-[#e0f2f7] pt-20 lg:pt-0"
         style={{
           backgroundImage: 'url("/src/assets/hero.jpg")',
-          backgroundSize: "cover", // Ensure background size covers the entire section
-          backgroundPosition: "center", // Ensure it's centered in the viewport
+          // backgroundSize: "cover", // Ensure background size covers the entire section
+          // backgroundPosition: "center", // Ensure it's centered in the viewport
           
         }}
       >
