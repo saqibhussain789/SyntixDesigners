@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -15,23 +16,23 @@ const Header: React.FC = () => {
     <nav className="sticky top-0 z-50 bg-[#E7ECEF] text-black shadow-md">
       <div className="flex items-center justify-between p-6 lg:p-5">
         {/* Logo */}
-        <a
-          href="/"
+        <Link
+          to="/"
           className="text-xl lg:text-2xl font-mono tracking-wider text-black hover:text-gray-700 transition-all"
         >
           SyntixDesigner
-        </a>
+        </Link>
 
         {/* Navigation Links on Desktop */}
         <div className="hidden lg:flex items-center justify-center space-x-8 flex-grow">
           {navItems.map((item) => (
-            <a
-              href={item.link}
+            <Link
+              to={item.link}
               key={item.name}
               className="text-md text-black hover:text-gray-700 px-3 py-1 transition-colors"
             >
               {item.name}
-            </a>
+            </Link>
           ))}
         </div>
 
@@ -111,14 +112,14 @@ const Header: React.FC = () => {
         }`}
       >
         {navItems.map((item) => (
-          <a
-            href={item.link}
+          <Link
+            to={item.link}
             key={item.name}
             className="text-md text-black hover:text-gray-700 px-3 py-1 transition-colors"
             onClick={() => setIsMenuOpen(false)} // Close the menu after clicking a link
           >
             {item.name}
-          </a>
+          </Link>
         ))}
       </div>
 
