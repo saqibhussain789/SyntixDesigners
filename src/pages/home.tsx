@@ -13,18 +13,18 @@ import T3 from "../assets/T3.jpg";
 import T4 from "../assets/T4.jpg";
 import T5 from "../assets/T5.jpg";
 import T6 from "../assets/T6.jpg";
+import Hero from "../assets/hero.jpg";
 
 const Home: React.FC = () => {
   return (
     <div>
       <section
         id="hero"
-        className="h-screen flex flex-col lg:flex-row items-center justify-between px-6 py-12 
-             bg-cover bg-center lg:bg-center lg:bg-cover bg-[#e0f2f7] pt-20 lg:pt-0"
+       className="h-screen flex flex-col lg:flex-row items-center justify-between px-6 py-12 
+              bg-cover bg-center lg:bg-center lg:bg-cover bg-[#e0f2f7] pt-20 lg:pt-0"
         style={{
-          backgroundImage: 'url("/src/assets/hero.jpg")',
-          // backgroundSize: "cover", // Ensure background size covers the entire section
-          // backgroundPosition: "center", // Ensure it's centered in the viewport
+          backgroundImage: `url(${Hero})`,
+          
           
         }}
       >
