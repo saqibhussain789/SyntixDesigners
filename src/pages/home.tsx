@@ -1,5 +1,5 @@
 import React from "react";
-
+import WebImage from ".././assets/Web.jpg"
 const Home: React.FC = () => {
   return (
     <div>
@@ -7,14 +7,14 @@ const Home: React.FC = () => {
       <section
         id="hero"
         className="h-screen flex flex-col lg:flex-row items-center justify-between px-6 py-12 
-             bg-cover bg-center lg:bg-auto lg:bg-center lg:bg-cover bg-[#e0f2f7] pt-20 lg:pt-0"
+             bg-cover bg-center lg:bg-center lg:bg-cover bg-[#e0f2f7] pt-20 lg:pt-0"
         style={{
           backgroundImage: 'url("/src/assets/hero.jpg")',
         }}
       >
         <div
-          className="absolute inset-0 bg-[url('/src/assets/hero.jpg')] bg-cover bg-center lg:bg-cover 
-               lg:bg-center lg:bg-auto bg-[length:200%] lg:bg-[length:100%] h-screen bg-no-repeat"
+          className="absolute inset-0 bg-[url('/src/assets/hero.jpg')] bg-cover bg-center
+               lg:bg-center   lg:bg-[length:100%] h-screen bg-no-repeat"
         ></div>
         <div className="relative z-10 lg:w-1/2 text-center lg:text-left text-black lg:text-white">
           <p className="text-3xl lg:text-4xl font-semibold mb-4">
@@ -65,7 +65,7 @@ const Home: React.FC = () => {
           {/* Service Card 1 */}
           <div className="bg-[#F8F8FB] rounded-lg shadow-lg p-6 w-full sm:w-64">
             <img
-              src="/src/assets/Web.jpg"
+              src={WebImage}
               alt="Web Development"
               className="w-full h-40 object-cover rounded-lg mb-4"
             />
